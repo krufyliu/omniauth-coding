@@ -1,4 +1,4 @@
-# Omniauth::Coding
+# Omniauth Coding
 
 OmniAuth strategy for authenticating to Coding. To use it, you'll need to sign up for an OmniAuth2 Application ID and SECRET on the [Coding Application Page](https://coding.net/user/account/setting/applications)
 
