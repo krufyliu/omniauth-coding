@@ -16,8 +16,9 @@ module OmniAuth
       info do
         {
           nickname: raw_info['name'],
-          email: raw_info['email'],
+          email: email,
           sex: raw_info['sex'],
+          name: raw_info['global_key'],
           avatar: raw_info['gravatar']
         }
       end
@@ -28,8 +29,14 @@ module OmniAuth
 
       def raw_info
         access_token.options[:mode] = :query
+        @email ||= access_token.get('api/account/email').parsed['data']
         @raw_info ||= access_token.get('api/current_user').parsed['data']
       end
+
+      def email
+        @email
+      end
+
     end
   end
 end
