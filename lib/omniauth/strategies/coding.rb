@@ -19,7 +19,7 @@ module OmniAuth
           email: email,
           sex: raw_info['sex'],
           name: raw_info['global_key'],
-          avatar: raw_info['gravatar']
+          avatar: raw_info['avatar']
         }
       end
 
@@ -36,7 +36,6 @@ module OmniAuth
       def email
         @email
       end
-
     end
   end
 end
